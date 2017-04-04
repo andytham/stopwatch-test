@@ -1,47 +1,41 @@
-![ATM Party](https://i.giphy.com/3oz8xZGfHArTvh99YI.gif)
+# Time Keeps on Ticking Ticking Ticking
 
-# React ATM Application
-Build a virtual ATM machine using React
+![](https://media.giphy.com/media/3orieKqQUhlrE29cA0/giphy.gif)
 
-### Learning Objectives
-* React with `create-react-app`
-* Error Handling
+Let's add an app to our React portfolio! Your old gym coach from high school, the guy who yelled at you and wore sweatpants to fancy occassions, reached out and is now a client. He understands that we live in a digital world, so he wants to modernize with a digital stopwatch!
 
-### Completion
-Part 1 - 3
+But he's concerned about your ability to keep track of the tasks needed to build out the stopwatch...
 
-### Submission
-Homework is due by 11pm
-
-### Setup
-Use the included starter files in `public/`, `src/` and `package.json`. Perform an `npm install` in terminal to fetch the required dependencies. Navigate to `localhost:3000` in a browser to confirm the starter app is working. *psst check your package scripts*
 
 ### Assignment
-Here are your tasks:
 
-#### Part 1 `src/App.js`
-1. Pass a `name` property to each `Account` component, one for "Checking", the other for "Savings"
+Task: Build a react app which implements a stopwatch. 
 
-#### Part 2 `src/Account.js`
-1. Use the property you set in `App.js` and add it to the `<h2>`
-2. Add a `balance` property to `state` and set to 0 initially
-3. When the `Deposit` button is clicked, you should add the amount entered in the text field to the balance
-4. When the `Withdraw` button is clicked, you should deduct the amount entered in the text field to the balance
-  - You should not be able to withdraw more than the current balance
-5. If the current balance is 0, you should add a class of `zero` to the `<div className="balance">` div
+**Requirements**:
+* **Display**
+* **Start button**
+* **Stop button**
+* **Reset button**
 
-#### Part 3 - Error Handling
-We can't always count on people using our applications correctly - in fact we should always assume that someone is trying to break our code! Your applications should always have some level of "error handling". Error handling is simply the concept of anticipating different ways that invalid user input could break your application and writing robust code to handle that gracefully.
+### Step 1 
 
-Try handling these scenarios:
-1. What if a User enters a negative number and clicks **Deposit**
-2. What if a User enters a negative number and clicks **Withdraw**
-3. What if a User enters a string and clicks Deposit or Withdraw?
+Let's start out our react app with `create-react-app <stop watch>`  
 
-## Bonus
-Add the [accounting](https://www.npmjs.com/package/accounting) package to format the balance.
+Back in my day, we compiled our webpacks and we liked it!
+![man yells at cloud](https://i.imgur.com/91sn32Q.jpg?fb)  
 
-## Hints
-- Remember to set a `ref` on the text field for targeting
-- The amount entered in the text field will initially be a string, so you'll need to convert that to a number
-- Don't forget to `bind` your click methods!
+### Step 2
+Decide how exactly you are going to hold state in your parent component
+`App`. In general your state should be the minimum amount of information needed for your components. Do not hold *computed* values in your state (why, you ask?  [read this!(optional)](http://reactkungfu.com/2015/09/common-react-dot-js-mistakes-unneeded-state/)). You will also need to define a few methods, which you can pass to the buttons as props. You should have at least a `start`, `stop` and `reset` methods which will be fired by the buttons.
+
+HINT: Use
+[setInterval](https://developer.mozilla.org/en-US/docs/Web/API/WindowTimers/setInterval)
+to measure time. It is not precise in terms of time keeping but is
+good enough for our purposes.
+[clearInterval](https://developer.mozilla.org/en-US/docs/Web/API/WindowOrWorkerGlobalScope/clearInterval)  
+in keeping with our setInterval methods, let's also be sure to use clearInterval when we are done witthem. We don't want to start doubling up
+
+### Bonus
+
+We now have our stopwatch that can `start`, `stop`, and `reset` time, but lets keep track of our laps. Create another component that receives props of laps and renders our a list of times relating to our laps. Make sure the `reset` button clears the laps.
+
