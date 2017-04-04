@@ -11,10 +11,10 @@ Build a virtual ATM machine using React
 Part 1 - 3
 
 ### Submission
-Homework is due Sunday by 11pm
+Homework is due by 11pm
 
 ### Setup
-Use the included starter files in `public/`, `src/` and `package.json`. Perform an `npm install` in terminal to fetch the required dependencies. Navigate to `localhost:3000` in a browser to confirm the starter app is working.
+Use the included starter files in `public/`, `src/` and `package.json`. Perform an `npm install` in terminal to fetch the required dependencies. Navigate to `localhost:3000` in a browser to confirm the starter app is working. ~psst check your package scripts~
 
 ### Assignment
 Here are your tasks:
