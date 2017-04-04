@@ -31,9 +31,7 @@ Decide how exactly you are going to hold state in your parent component
 HINT: Use
 [setInterval](https://developer.mozilla.org/en-US/docs/Web/API/WindowTimers/setInterval)
 to measure time. It is not precise in terms of time keeping but is
-good enough for our purposes.
-[clearInterval](https://developer.mozilla.org/en-US/docs/Web/API/WindowOrWorkerGlobalScope/clearInterval)  
-in keeping with our setInterval methods, let's also be sure to use clearInterval when we are done witthem. We don't want to start doubling up
+good enough for our purposes. Also [clearInterval](https://developer.mozilla.org/en-US/docs/Web/API/WindowOrWorkerGlobalScope/clearInterval) will help in keeping with our setInterval methods, let's also be sure to use clearInterval when we are done witthem. We don't want to start doubling up
 
 ### Bonus
 
