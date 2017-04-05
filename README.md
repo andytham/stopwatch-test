@@ -26,7 +26,7 @@ Back in my day, we compiled our webpacks and we liked it!
 
 ### Step 2
 Decide how exactly you are going to hold state in your parent component
-`App`. In general your state should be the minimum amount of information needed for your components(want to know more about proper state-ness? [read this!(optional)](http://reactkungfu.com/2015/09/common-react-dot-js-mistakes-unneeded-state/)). You will also need to define a few methods, which you can pass to the buttons as props. You should have at least a `start`, `stop` and `reset` methods which will be fired by the buttons.
+`App`. In general your state should be the minimum amount of information needed for your components (want to know more about proper state-ness? [read this!(optional)](http://reactkungfu.com/2015/09/common-react-dot-js-mistakes-unneeded-state/)). You will also need to define a few methods, which you can pass to the buttons as props. You should have at least a `start`, `stop` and `reset` methods which will be fired by the buttons.
 
 HINT: Use
 [setInterval](https://developer.mozilla.org/en-US/docs/Web/API/WindowTimers/setInterval)
